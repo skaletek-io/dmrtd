@@ -5,7 +5,7 @@
 DMRTD is dart implementation of [ICAO 9303](https://www.icao.int/publications/pages/publication.aspx?docnum=9303) standard.
 Library provide APIs to send commands to and read data from MRTD.
 
-DMRTD was first developed as part of the [port.link](https://port.link/) verification and attestation service. It's used in [flutter-port-app](https://github.com/ZeroPass/flutter-port-sdk) and integrated via [flutter-port-sdk](https://github.com/ZeroPass/flutter-port-app).
+DMRTD was first developed as part of the [port.link](https://port.link/) verification and attestation service. It's used in [flutter-port-app](https://github.com/ZeroPass/flutter-port-app) and integrated via [flutter-port-sdk](https://github.com/ZeroPass/flutter-port-sdk).
 
 ## Key features
 * PACE & BAC session key establishment protocol
