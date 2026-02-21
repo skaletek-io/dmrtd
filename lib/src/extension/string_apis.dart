@@ -41,10 +41,17 @@ extension StringYYMMDDateApi on String {
   }
 
   DateTime parseDate({bool futureDate = false}) {
-    if (length == 6) {
-      return this.parseDateYYMMDD(futureDate: futureDate);
+    final s = trim();
+    if (s.length == 6) {
+      return s.parseDateYYMMDD(futureDate: futureDate);
+    } else if (s.length == 8) {
+      // yyyymmdd per ICAO 9303 (e.g. DG12 date of issue, Turkish passports)
+      final y = int.parse(s.substring(0, 4));
+      final m = int.parse(s.substring(4, 6));
+      final d = int.parse(s.substring(6, 8));
+      return DateTime(y, m, d);
     } else {
-      return DateTime.parse(this);
+      return DateTime.parse(s);
     }
   }
 }
